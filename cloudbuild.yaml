@@ -1,0 +1,10 @@
+steps:
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/k8s-assignment-441200/container2/container2-image:latest', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-central1-docker.pkg.dev/k8s-assignment-441200/container2/container2-image:latest']
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
